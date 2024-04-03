@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import { Roboto } from 'next/font/google';
 
+const roboto = Roboto({ subsets: ['latin-ext'], weight: ['100']})
 export default function Home() {
   return (
     <div className="container">
@@ -11,10 +13,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="PrivateDriver.io!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <img className='main-logo' src="/privatedriver-logo.png" alt="PrivateDriver Logo"  />
+        <h1 className={roboto.className}>A Driver Driven App!</h1>
       </main>
 
       <Footer />
